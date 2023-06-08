@@ -15,12 +15,13 @@ public protocol IPlayerView {
     func addToView(parent: UIView)
     func preventsCapture(disableRecord: Bool)
     func updateVideoGravity(gravity: AVLayerVideoGravity)
+    func setPlayer(player: AVPlayer)
 }
 
 
 
 public final class GreedyProxy {
-    static func createPlayer() -> IPlayerView? {
+    static public func createPlayer() -> IPlayerView? {
         if #available(iOS 13.0, *) {
             return GreedyPlayerView()
         } else {

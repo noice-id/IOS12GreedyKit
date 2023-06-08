@@ -138,4 +138,8 @@ public final class GreedyPlayerView: GreedyMediaView, IPlayerView {
     public func updateVideoGravity(gravity: AVLayerVideoGravity) {
         // do nothing
     }
+    
+    public func setPlayer(player: AVPlayer) {
+        self.player = player
+    }
 }
