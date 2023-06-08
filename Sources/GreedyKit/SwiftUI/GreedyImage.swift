@@ -14,6 +14,7 @@ private enum SourceType {
     case ciImage(CIImage)
 }
 
+@available(iOS 13.0, *)
 public struct GreedyImage: UIViewRepresentable {
     private let preventsCapture: Bool
     private let contentGravity: AVLayerVideoGravity

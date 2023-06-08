@@ -8,6 +8,8 @@
 import UIKit
 import AVFoundation
 
+
+@available(iOS 13.0, *)
 public class GreedyMediaView: UIView {
     @Proxy(\.renderView.preventsCapture)
     public var preventsCapture: Bool

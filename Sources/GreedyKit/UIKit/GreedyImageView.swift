@@ -9,6 +9,8 @@ import UIKit
 import CoreImage
 import AVFoundation
 
+
+@available(iOS 13.0, *)
 public final class GreedyImageView: GreedyMediaView {
     private var context: CIContext?
     private let renderQueue = DispatchQueue(label: "greedykit.queue.image-render-queue")
@@ -38,6 +40,8 @@ public final class GreedyImageView: GreedyMediaView {
     }
 }
 
+
+@available(iOS 13.0, *)
 extension GreedyImageView {
     public func setImage(_ cgImage: CGImage) {
         guard let buffer = cgImage.sampleBuffer else { return }

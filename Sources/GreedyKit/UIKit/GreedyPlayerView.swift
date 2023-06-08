@@ -9,7 +9,8 @@ import UIKit
 import Combine
 import AVFoundation
 
-public final class GreedyPlayerView: GreedyMediaView {
+@available(iOS 13.0, *)
+public final class GreedyPlayerView: GreedyMediaView, IPlayerView {
     public var player: AVPlayer? {
         didSet {
             addPlayerItemObserver()
@@ -116,5 +117,25 @@ public final class GreedyPlayerView: GreedyMediaView {
                 playerItem.add(self.videoOutput)
                 self.displayLink.isPaused = false
             }
+    }
+    
+    public func removeFromSuper() {
+        self.removeFromSuperview()
+    }
+    
+    public func updateBackgroundColor(color: UIColor) {
+        backgroundColor = color
+    }
+    
+    public func addToView(parent: UIView) {
+        parent.addSubview(self)
+    }
+    
+    public func preventsCapture(disableRecord: Bool) {
+        preventsCapture = disableRecord
+    }
+    
+    public func updateVideoGravity(gravity: AVLayerVideoGravity) {
+        // do nothing
     }
 }

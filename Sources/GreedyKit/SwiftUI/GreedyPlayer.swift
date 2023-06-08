@@ -8,6 +8,8 @@
 import SwiftUI
 import AVFoundation
 
+
+@available(iOS 13.0, *)
 public struct GreedyPlayer: UIViewRepresentable {
     private let player: AVPlayer
     private let preventsCapture: Bool

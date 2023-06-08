@@ -9,6 +9,8 @@ import Foundation
 import AVFoundation
 import CoreImage
 
+
+@available(iOS 13.0, *)
 extension CGImage {
     var cvPixelBuffer: CVPixelBuffer? {
         var cvPixelBuffer: CVPixelBuffer?

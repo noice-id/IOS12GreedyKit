@@ -8,6 +8,7 @@
 import UIKit
 import AVFoundation
 
+@available(iOS 13.0, *)
 final class GreedyRenderView: UIView {
     override class var layerClass: AnyClass {
         AVSampleBufferDisplayLayer.self
