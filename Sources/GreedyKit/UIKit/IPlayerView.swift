@@ -16,6 +16,7 @@ public protocol IPlayerView {
     func preventsCapture(disableRecord: Bool)
     func updateVideoGravity(gravity: AVLayerVideoGravity)
     func setPlayer(player: AVPlayer)
+    func setBounds(bounds: CGRect)
 }
 
 

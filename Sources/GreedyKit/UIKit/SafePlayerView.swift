@@ -42,4 +42,8 @@ public final class SafePlayerView: AVPlayerLayer, IPlayerView {
     public func setPlayer(player: AVPlayer) {
         self.player = player
     }
+    
+    public func setBounds(bounds: CGRect) {
+        self.frame = bounds
+    }
 }
